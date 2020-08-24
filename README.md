@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
+
+In order to clone this repo, in your VS Code terminal type this command:
+git clone https://github.com/ashleygerst/eastwestReact
 
 ## Available Scripts
 
