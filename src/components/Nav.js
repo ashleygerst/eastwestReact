@@ -6,8 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -14,10 +14,8 @@ class Main extends Component {
     
     return (
       <Router>
-        <div>
         <Navigation />
         <Header />
-        <Switch>
           <Route path='/' component={Home}>
             <Home />
           </Route>
@@ -26,10 +24,7 @@ class Main extends Component {
           </Route>
                 {/* <Route path='/portfolio' component={Portfolio} />
                 <Route path='/contact' component={Contact} /> */}
-        
-        </Switch>
         <Footer />
-        </div>
         </Router>
     );
   }
