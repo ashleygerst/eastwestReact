@@ -46,8 +46,8 @@ const About = (props) => {
   const slides = items.map((item) => {
     return (
       <CarouselItem
-        className="custom-tag"
-        tag="div"
+        className='custom-tag'
+        tag='div'
         key={item.id}
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
@@ -74,8 +74,8 @@ const About = (props) => {
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+        <CarouselControl direction='prev' directionText='Previous' onClickHandler={previous} />
+        <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
       </Carousel>
     </div>
   );
