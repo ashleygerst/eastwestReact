@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {
+  Button,
   Collapse,
+  Media,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -16,29 +18,27 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar sticky="top" expand="md" className="">
-        <div className="container">
-        <NavbarBrand href="/">EW Logo</NavbarBrand>
+      <Navbar sticky='top' expand='md'>
+        <NavbarBrand href='/'>
+          <Media width='40vw' height='40vw' src={require('../assets/EWMLogoSolo.png')}/>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <div className="">
-          <Nav className="navItems ml-4" navbar>
+          <Nav className='navItems ml-auto' navbar>
             <NavItem>
-              <NavLink className="nav-link" href="/">Home</NavLink>
+              <NavLink className='nav-link' href='/'>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" href="/about">About</NavLink>
+              <NavLink className='nav-link' href='/about'>About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" href="/portfolio">Portfolio</NavLink>
+              <NavLink className='nav-link' href='/portfolio'>Portfolio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="nav-link" href="/contact">Contact</NavLink>
+              <NavLink className='nav-link' href='/contact'>Contact</NavLink>
             </NavItem>
           </Nav>
-          </div>
         </Collapse>
-        </div>
       </Navbar>
     </div>
   );
