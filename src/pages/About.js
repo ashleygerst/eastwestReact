@@ -94,6 +94,9 @@ const About = (props) => {
             <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
           </Carousel>
         </div>
+        <h1 className="text-center mt-5">Founded in 1982</h1>
+        <h5 className="text-center">A family owned business</h5>
+        <p className="text-center">East West was founded by Jim Eastly Sr and Harold West, Kenneth Gerst acquired this business in 1985. He passed away on March 17, 2017 and is survived by his four children and eight grandchildren. Ken's son, Gary Gerst, apprenticed with East West in 1987 and eventually took over the business when Ken retired. Gary currently runs the business with his wife, Stacy. Gary and Stacy operate the business out of Castle Shannon, Pennsylvania.</p>
       </div>
     </Router>
   );
