@@ -4,8 +4,12 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  Breadcrumb,
+  BreadcrumbItem
 } from 'reactstrap';
+import AboutHeader from '../components/AboutHeader';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const items = [
   {
@@ -57,27 +61,41 @@ const About = (props) => {
   });
 
   return (
-    <div>
-      <style>
-        {
-          `.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: black;
-            }`
-        }
-      </style>
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction='prev' directionText='Previous' onClickHandler={previous} />
-        <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
-      </Carousel>
-    </div>
+    <Router>
+      <AboutHeader />
+      <div className="container">
+        <div className="row mt-1">
+          <div className="col mt-1">
+              <Breadcrumb>
+                  <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                  <BreadcrumbItem active>About</BreadcrumbItem>
+              </Breadcrumb>
+              <h2 className="text-center">About East West</h2>
+          </div>
+        </div>
+        <div>
+          <style>
+            {
+              `.custom-tag {
+                  max-width: 100%;
+                  height: 500px;
+                  background: black;
+                }`
+            }
+          </style>
+          <Carousel
+            activeIndex={activeIndex}
+            next={next}
+            previous={previous}
+          >
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+            {slides}
+            <CarouselControl direction='prev' directionText='Previous' onClickHandler={previous} />
+            <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
+          </Carousel>
+        </div>
+      </div>
+    </Router>
   );
 }
 

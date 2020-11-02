@@ -14,7 +14,6 @@ class Main extends Component {
     return (
       <Router>
         <Navigation />
-        <Header />
           <Switch>
             <Route path='/about'>
               <About />

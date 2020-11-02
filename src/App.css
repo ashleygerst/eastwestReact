@@ -19,7 +19,7 @@
 }
 
 .bg-img-about {
-  background-image: url('./assets/pgh.jpg') !important;
+  background-image: url('./assets/pipes.jpg') !important;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -29,7 +29,7 @@
 }
 
 .bg-img-portfolio {
-  background-image: url('./assets/pgh.jpg') !important;
+  background-image: url('./assets/carlos-lindner-unsplash.jpg') !important;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -39,7 +39,7 @@
 }
 
 .bg-img-contact {
-  background-image: url('./assets/pgh.jpg') !important;
+  background-image: url('./assets/pawel-czerwinski-unsplash.jpg') !important;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
