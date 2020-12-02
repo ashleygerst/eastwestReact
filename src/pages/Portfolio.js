@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
 import { Breadcrumb, BreadcrumbItem, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import PortfolioHeader from '../components/PortfolioHeader';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class Portfolio extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+          currentPage: 'Portfolio'
+        }
+      }
+      componentDidMount() {
+        this.props.changeState('portfolio')
+      }
     render() {
         return (
             <Router>
-                <PortfolioHeader />
                     <div className="container">
                         <div className="row mt-1">
                             <div className="col mt-1">

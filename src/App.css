@@ -1,6 +1,6 @@
 
 
-.jumbotron > .jumboContent {
+.jumboText {
   text-align: center;
   text-anchor: center;
   color: white;
@@ -8,59 +8,25 @@
   position: relative;
 }
 
-.bg-img-home {
-  background-image: url('./assets/pgh.jpg') !important;
+.jumbotronImage {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 300px;
+  width: 100%;
   z-index: 1;
 }
 
-.bg-img-about {
-  background-image: url('./assets/pipes.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 500px;
-  z-index: 1;
-}
-
-.bg-img-portfolio {
-  background-image: url('./assets/carlos-lindner-unsplash.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 500px;
-  z-index: 1;
-}
-
-.bg-img-contact {
-  background-image: url('./assets/pawel-czerwinski-unsplash.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 500px;
-  z-index: 1;
-}
-
-.jumbotron > .overlay {
+/* .bg-overlay {
   position: absolute;
-  top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
   background-color: rgba(77, 77, 102, 0.85);
-  z-index: 2;
-}
-
-.bg-overlay {
-  position: relative;
-}
+  width: 100%;
+  height: 50vw;
+  z-index: -3;
+} */
 
 .fa {
   padding-right: 8px;

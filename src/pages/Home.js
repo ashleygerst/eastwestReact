@@ -1,15 +1,23 @@
 import Header from '../components/Header';
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Card, Button, CardImg, CardTitle, CardText, CardGroup,
   CardSubtitle, CardBody
 } from 'reactstrap';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-const Home = (props) => {
+class Home extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentPage: "Home"
+    }
+  }
+
+  render() {
+
   return (
     <Router>
-      <Header />
       <CardGroup>
         <Card>
           <CardImg top width='100%' height='350vw' src={require('../assets/pink.jpg')} alt='Card image cap' />
@@ -35,7 +43,9 @@ const Home = (props) => {
       </CardGroup>
     </Router>
   );
+  }
 };
+
 
 export default Home;
 
