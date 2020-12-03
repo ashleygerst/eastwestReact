@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Label, Col, Row, Form } from 'reactstrap';
+import { Button, Label, Col, Row, Form, Media, Container } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class Contact extends Component {
     constructor(props) {
@@ -15,7 +18,7 @@ class Contact extends Component {
     }
 }
     componentDidMount() {
-    this.props.changeState('contact')
+    this.props.changeState('Contact')
   }
 
     handleSubmit(values) {
@@ -25,11 +28,24 @@ class Contact extends Component {
     }
 
 render () {
-
     return (
-        <div className="container">
+        <Router>
+            <div className="container">
+                <div className="row mt-1">
+                    <div className="col mt-1">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                            <BreadcrumbItem active> Contact</BreadcrumbItem>
+                        </Breadcrumb>
+                        <h2 className="text-center"></h2>
+                        <hr />
+                    </div>
+                </div>
+                <div className="row row-content contact">
+                    <Media src={require('../assets/googlemap.png')}/>
+                </div>
                 <div className="row row-content">
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 text-center mt-2">
                         <h5>Business Hours</h5>
                         <hours>
                                 Mon: 7:00 AM – 4:00 PM<br />
@@ -41,7 +57,7 @@ render () {
                                 Sun: Closed<br />
                         </hours>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 text-center mt-2">
                         <h5>Address</h5>
                         <address>
                             3849 Willow Avenue<br />
@@ -105,6 +121,7 @@ render () {
                     </div>
                 </div>
             </div>
+        </Router>
         );
     }
 }
