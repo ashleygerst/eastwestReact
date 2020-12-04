@@ -35,7 +35,7 @@ const Navigation = (props) => {
               <NavLink className='nav-link' href='/portfolio'>Portfolio</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className='nav-link' href='/contact'>Contact</NavLink>
+              <NavLink className='nav-link' href='/Contact'>Contact</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
