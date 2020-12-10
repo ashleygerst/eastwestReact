@@ -18,6 +18,7 @@ class Home extends Component {
 
   return (
     <Router>
+      <Header />
       <CardGroup>
         <Card>
           <CardImg top width='100%' height='350vw' src={require('../assets/pink.jpg')} alt='Card image cap' />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Label, Col, Row, Form, Media, Container } from 'reactstrap';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ContactHeader from '../components/ContactHeader';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 class Contact extends Component {
@@ -17,9 +18,6 @@ class Contact extends Component {
             feedback: ''
     }
 }
-    componentDidMount() {
-    this.props.changeState('Contact')
-  }
 
     handleSubmit(values) {
         console.log(values)
@@ -30,6 +28,7 @@ class Contact extends Component {
 render () {
     return (
         <Router>
+            <ContactHeader />
             <div className="container">
                 <div className="row mt-1">
                     <div className="col mt-1">

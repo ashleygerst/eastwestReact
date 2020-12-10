@@ -4,22 +4,15 @@ import {
   BreadcrumbItem
 } from 'reactstrap';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import AboutHeader from '../components/AboutHeader';
 import AboutCarousel from '../components/aboutCarousel';
 
 class About extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      currentPage: "About"
-    }
-  }
-  componentDidMount() {
-    this.props.changeState('about')
-  }
-  render() {
-    
+
+render() {    
   return (
     <Router>
+      <AboutHeader />
       <div className="container">
         <div className="row mt-1">
           <div className="col mt-1">
